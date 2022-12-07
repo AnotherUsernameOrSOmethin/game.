@@ -1,0 +1,7 @@
+#item {
+    background-color: rgb(255, 255, 255);
+    height: 5px;
+    width: 5px;
+    border: 10px, white;
+    position: absolute;
+}

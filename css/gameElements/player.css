@@ -1,0 +1,10 @@
+/*--- Player ---*/
+
+#player {
+  background-color: white;
+  height: 10px;
+  width: 10px;
+  border: 0px, white;
+
+  position: absolute;
+}

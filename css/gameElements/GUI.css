@@ -1,0 +1,93 @@
+/*--- Basic HTML ---*/
+
+body {
+    background-color: black;
+    color: white;
+}
+
+/*--- Displayed Page ---*/
+
+.blank {
+    grid-area: "blank";
+}
+
+.screen {
+    display: grid;
+    grid-template-areas:
+        "game"
+        "taskbar";
+}
+
+/*---Main Game---*/
+
+.game {
+    grid-area: "game";
+    height: 600px;
+    width: auto;
+}
+
+/*===== Bar =====*/
+
+.taskbar {
+    grid-area: "taskbar";
+    display: grid;
+    grid-template-areas: "keys backpack stats";
+    height: 100px;
+    padding: 1%;
+}
+
+/*---Keys---*/
+
+#up {
+    grid-area: "up";
+}
+
+#down {
+    grid-area: "down";
+}
+
+#left {
+    grid-area: "left";
+}
+
+#right {
+    grid-area: "right";
+}
+
+#atk {
+    grid-area: "atk";
+}
+
+#inter {
+    grid-area: "inter";
+}
+
+.keyInput {
+    grid-area: "keys";
+    display: grid;
+    grid-template-areas:
+        "atk up inter"
+        "left down right";
+    height: 100%;
+    width: 50%;
+    align-items: center;
+}
+
+.keyInput button {
+    height: 75%;
+    width: 95%;
+    border: 3px solid white;
+    background-color: black;
+    color: white;
+}
+
+.keyInput :hover {
+    background-color: white;
+    color: black;
+}
+
+/*---Inventory---*/
+
+.inventory {
+    border: 10px, white;
+}

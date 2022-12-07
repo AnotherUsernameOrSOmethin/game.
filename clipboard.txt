@@ -1,0 +1,128 @@
+_______________________________________________
+OLD CODE
+_______________________________________________
+
+let pHP = 100
+let bHP = 100
+
+class Player {
+    constructor (pName, pHP, pItem){
+
+        this.pName = pName
+        this.pHP = pHP
+        this.pItem = pItem
+
+    }
+
+    hurt(){
+        this.pHP = - 10
+    }
+
+    heal(){
+        this.pHP = + 20
+    }
+}
+
+class Boss {
+    constructor (bName, bHP, bItem){
+       
+        this.bName = bName
+        this.bHP = bHP
+        this.bItem = bItem
+    }
+
+    hurt(){
+        this.bHP = - 10
+    }
+
+    heal(){
+        this.bHP = + 20
+    }
+}
+
+class Item {
+    constructor()
+    
+}
+
+class Med extends Item {
+    constructor()
+}
+
+class Weapon extends Item {
+    constructor()
+}
+
+console.log()
+
+_______________________________________________
+REACT
+_______________________________________________
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+function Hello(props) {
+  return <h1>Hello World!</h1>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Hello />);
+
+_______________________________________________
+OLD PLAYER MOVE CODE
+_______________________________________________
+function moveUp(player) {
+  var elStyle = window.getComputedStyle(player);
+  var topValue = elStyle.getPropertyValue("top").replace("px", "");
+  player.style.top = (Number(topValue) - 20) + "px";
+}
+
+function moveDown(player) {
+  var elStyle = window.getComputedStyle(player);
+  var topValue = elStyle.getPropertyValue("top").replace("px", "");
+  player.style.top = (Number(topValue) + 20) + "px";
+}
+
+function moveLeft(player) {
+  var elStyle = window.getComputedStyle(player);
+  var leftValue = elStyle.getPropertyValue("left").replace("px", "");
+  player.style.left = (Number(leftValue) - 20) + "px";
+}
+
+function moveRight(player) {
+  var elStyle = window.getComputedStyle(player);
+  var leftValue = elStyle.getPropertyValue("left").replace("px", "");
+  player.style.left = (Number(leftValue) + 20) + "px";
+}
+
+_______________________________________________
+OLD TASKBAR CONTROLS
+_______________________________________________
+<div class="keyInput">
+                <button id="atk">Attack</button>
+                <button id="up">/\</button>
+                <button id="inter">Interact</button>
+                <button id="left"><</button>
+                <button id="down">\/</button>
+                <button id="right">></button>
+            </div>
+
+
+_______________________________________________
+INVENTORY
+_______________________________________________
+class Inventory {
+  constructor() {
+    this.Pstuff = []
+  }
+
+  //@returns {Boolean}
+  openInv () {
+    if (this.Pstuff[0]) {
+      
+      this.items.array.forEach(inventory => {
+        
+      });
+    }
+  }
+}
